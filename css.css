@@ -1,0 +1,92 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --back: #222222;
+    --primary: #303030;
+}
+.card-tasks{
+    padding: 5px !important;
+}
+.card-tasks p{
+    font-weight: 400;
+    font-size: 15px;
+}
+.card-tasks h3{
+    font-weight: 500;
+    font-size: 16px;
+}
+.new-tasks{
+    width: 60%;
+    
+}
+
+.new-tasks .card{
+    border-radius: 8px;
+}
+.new-tasks .card-body{
+    background: var(--back) !important;
+    border-radius: 8px;
+    border: 1px solid #646464 ;
+}
+
+.new-tasks input{
+    background: var(--back);
+    color: #fafafa;
+}
+.new-tasks textarea{
+    background: var(--back);
+    overflow-y: hidden;
+    color: #fafafa;
+    
+}
+
+.new-tasks input:focus{
+    outline: transparent !important;
+    background: var(--back);
+    border-color: var(--back) !important;
+    box-shadow: 0 0 0px !important;
+    color: #fafafa;
+
+}
+
+.new-tasks textarea:focus{
+    outline: transparent !important;
+    background: var(--back);
+    border-color: var(--back) !important;
+    box-shadow: 0 0 0px !important;
+    color: #fafafa;
+
+}
+
+textarea{  
+    overflow:hidden;
+    display:block;
+}
+
+.new-tasks__save:hover{
+    background: var(--primary);
+}
+
+.btn-edit{
+    font-size: 14px;
+    padding: 5px 7px 5px 8px;
+}
+.btn-edit:hover{
+    background: #404040;
+}
+.btn-delete{
+    font-size: 14px;
+    padding: 5px 7px 5px 8px;
+}
+.btn-delete:hover{
+    background: #e44444;
+}
+
+@media (max-width: 800px){
+    .new-tasks{
+        width: 100%;
+        
+    }
+}
