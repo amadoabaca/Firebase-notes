@@ -84,9 +84,152 @@ textarea{
     background: #e44444;
 }
 
+/* auth */
+
+body{
+    background: #222222 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.login-main{
+    padding: 50px;
+}
+.login-card{
+    width: 50%;
+    background: #303030;
+    border-radius: 8px;
+    padding: 50px 70px 50px 70px;
+}
+.card-tit h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #fafafa;
+}
+.login-card input{
+    background: #dddddd;
+    border: 1px solid #dddddd ;
+    color: #0e0e0e;
+    font-size: 14px;
+}
+.login-card input:focus{
+    outline: transparent !important;
+    background: #fafafa;
+    border: 1px solid #fafafa ;
+    box-shadow: 0 0 0px !important;
+    color: #0e0e0e;
+}
+.forgot a{
+    color: #dddddd;
+    font-size: 14px;
+}
+.forgot a:hover{
+    color: #fafafa;
+}
+
+.google{
+    display: flex;
+    justify-content: center !important;
+}
+.google button{
+    background: #4285f4;
+    border-radius: 8px;
+    color: #fafafa;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 25px;
+    margin: 40px 0 40px 0;
+}
+.google button:hover{
+    background:  #2c79f5;
+    border-color: #4285f4;
+    color: #fafafa;
+    
+}
+.register{
+    display: flex;
+    justify-content: center !important;
+    color:  #dddddd;
+    font-size: 14px;
+}
+.register a{
+    color: #fafafa !important;
+    font-weight: 500;
+}
+.register p{
+    margin-bottom: 5px;
+}
+.register a:hover{
+    color: #fafafa !important;
+    font-weight: 500;
+}
+.btn-login{
+    display: flex;
+    justify-content: center !important;
+    
+}
+.btn-login button{
+    background: #fafafa;
+    border-radius: 8px;
+    color: #0e0e0e;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 25px;
+    width: 100%;
+}
+.btn-login button:hover{
+    background:  #dddddd;
+    color: #0e0e0e;
+}
+.register-modal .modal-title{
+    font-weight: 700;
+    font-size: 24px;
+}
+
 @media (max-width: 800px){
     .new-tasks{
         width: 100%;
         
     }
+}
+
+@media (max-width: 850px){
+    .login-card{
+        width: 60%;
+        padding: 40px 60px 40px 60px;
+    }
+}
+
+@media (max-width: 770px){
+    .login-card{
+        width: 100% !important;
+    }
+}
+@media (max-width: 450px){
+    .login-card{
+        padding: 30px 50px 30px 50px;
+    }
+    .login-main{
+        padding: 30px 10px;
+    }
+
+    .btn-login button{
+        font-size: 12px;
+    }
+    .register{
+        font-size: 12px;
+    }
+    .google button{
+        font-size: 12px;
+    }
+    .forgot a{
+        font-size: 12px;
+    }
+    .card-tit h2{
+        font-size: 22px;
+
+    }
+    .login-card input{
+        font-size: 12px;
+    }
+    
 }
