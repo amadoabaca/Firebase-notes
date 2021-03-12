@@ -53,7 +53,19 @@ function observer(){
         if (user) {
             console.log("inicio sesion")
             document.getElementById("tasks-show").style.display = "block";
+            var droptext = document.getElementById("dropdownText")
+            var dropimg = document.getElementById("dropdownImg")
+
+            droptext.innerHTML = `
+                <p>Hola ${user.displayName}!</p>
             
+            `;
+
+            dropimg.innerHTML = `
+                <img src="${user.photoURL}" alt="">
+            `;
+
+
             mostrar.innerHTML = ``;
             
           // User is signed in.
@@ -85,7 +97,7 @@ function observer(){
                           <h2>Login and start taking notes!</h2>
                       </div>
                       <form action="">
-                          <input type="email" placeholder="Email" id="email2" class="form-control mb-2 log-email">
+                          <input type="email" placeholder="Email" id="email2" class="form-control mb-4 log-email">
                           <input type="password" placeholder="Password" id="password2" class="form-control mb-2 log-pass">
                       </form>
                       <div class="forgot d-flex justify-content-end">
@@ -113,18 +125,6 @@ function observer(){
 }
 observer();
 
-// function aparece(user){
-//     var user = user;
-//     var mostrar = document.getElementById("mostrar");
-//     if(user.emailVerified){
-//         mostrar.innerHTML = `
-
-        
-
-//         `;
-//     }
-    
-// }
 
 
 function cerrar(){
@@ -291,3 +291,21 @@ function autosize(){
     el.style.cssText = 'height:' + el.scrollHeight + 'px';
   },0);
 }
+
+// dropdown
+// function FunctionDropdown() {
+//     document.getElementById("myDropdown").classList.toggle("show");
+//   }
+  
+//   window.onclick = function(event) {
+//     if (!event.target.matches('.dropbtn')) {
+//       var dropdowns = document.getElementsByClassName("dropdown-content");
+//       var i;
+//       for (i = 0; i < dropdowns.length; i++) {
+//         var openDropdown = dropdowns[i];
+//         if (openDropdown.classList.contains('show')) {
+//           openDropdown.classList.remove('show');
+//         }
+//       }
+//     }
+//   }

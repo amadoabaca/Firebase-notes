@@ -6,6 +6,41 @@ body{
     --back: #222222;
     --primary: #303030;
 }
+
+.main-header{
+    background: var(--primary);
+    height: 60px;
+    
+}
+.main-header p{
+    margin-bottom: 0;
+}
+.nav-container{
+    width: 100%;
+}
+.main-header .nav-down{
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+.main-header .user-img{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background: var(--back);
+}
+
+.main-header img{
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 8px;
+}
+#tasks-show{
+    margin-top: 100px;
+}
+
 .card-tasks{
     padding: 5px !important;
 }
@@ -84,6 +119,35 @@ textarea{
     background: #e44444;
 }
 
+/* dropdown */
+.dropdown-content {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 130px;
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: #fafafa;
+  }
+  
+  .nav-down:hover .dropdown-content {display: block;}
+  
+  .dropdown-content button {
+    margin-left: 20%;
+    margin-top: 15px;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+  
+
+
 /* auth */
 
 body{
@@ -106,16 +170,22 @@ body{
     font-weight: 700;
     color: #fafafa;
 }
+.form-control{
+    border: none;
+    border-radius: 0;
+}
 .login-card input{
-    background: #dddddd;
-    border: 1px solid #dddddd ;
+    background: #303030;
+    border-bottom: 1px solid #808080;
     color: #0e0e0e;
     font-size: 14px;
+    
 }
 .login-card input:focus{
     outline: transparent !important;
-    background: #fafafa;
-    border: 1px solid #fafafa ;
+    background: #303030;
+    transition: all .5s;
+    border-bottom: 1px solid #fafafa ;
     box-shadow: 0 0 0px !important;
     color: #0e0e0e;
 }
@@ -184,6 +254,22 @@ body{
 .register-modal .modal-title{
     font-weight: 700;
     font-size: 24px;
+}
+
+.register-modal input{
+    background: #303030;
+    border-bottom: 1px solid #808080;
+    color: #0e0e0e;
+    font-size: 14px;
+    
+}
+.register-modal input:focus{
+    outline: transparent !important;
+    background: #303030;
+    transition: all .5s;
+    border-bottom: 1px solid #fafafa ;
+    box-shadow: 0 0 0px !important;
+    color: #0e0e0e;
 }
 
 @media (max-width: 800px){

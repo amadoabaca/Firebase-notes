@@ -10,6 +10,32 @@
     <title>Tasks</title>
 </head>
 <body> 
+    <header class="main-header d-flex align-items-center">
+        <nav class="nav-container">
+            <div class="container">
+                <div class="row">
+                    <div class="nav-title col-md-6 float-left d-flex align-items-center">
+                        <p>notasdeamado</p>
+                    </div>
+                    <div class=" dropdown col-md-6">
+                        
+                        <div class="nav-down float-right dropbtn d-flex align-items-center">
+                            <i class="fas fa-sort-down"></i>
+                            <div class="dropdown-content" id="myDropdown">
+                                <div class="dropdown-title">
+                                    <div id="dropdownText"></div>
+                                </div>
+                                <button onclick="cerrar()" class="btn btn-danger"> Sign Out</button>
+                            </div>
+                        </div>
+                        <div id="dropdownImg" class="user-img float-right mr-4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- inner -->
     <div id="mostrar">
@@ -41,9 +67,7 @@
                         <div class="row" id="tasks-container">
     
                         </div>
-    
-                        <button onclick="cerrar()" class="btn btn-danger mt-3 mb-3">Cerrar Sesion</button>
-                
+                    
             </div>
             </div>
     </div>
@@ -54,18 +78,18 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Registrate</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
             <div class="modal-body">
-                <input id="email" type="email" placeholder="Ingresa email" class="form-control mb-2">
-                <input id="password" type="password" placeholder="Ingresa contraseña" class="form-control">
+                <input id="email" type="email" placeholder="New email" class="form-control mb-4">
+                <input id="password" type="password" placeholder="New password" class="form-control">
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-danger" onclick="registrar()" data-dismiss="modal">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" onclick="registrar()" data-dismiss="modal">Save</button>
             </div>
         </div>
         </div>
@@ -93,7 +117,7 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
-    <script src="auth.js"></script>
+    <script src="js.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
