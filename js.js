@@ -53,11 +53,12 @@ function observer(){
         if (user) {
             console.log("inicio sesion")
             document.getElementById("tasks-show").style.display = "block";
+            document.getElementById("dropdown").style.display = "block";
             var droptext = document.getElementById("dropdownText")
             var dropimg = document.getElementById("dropdownImg")
 
             droptext.innerHTML = `
-                <p>Hola ${user.displayName}!</p>
+                <p>Hi ${user.displayName}!</p>
             
             `;
 
@@ -85,6 +86,7 @@ function observer(){
           // User is signed out.
           console.log("no inicio sesion")
           document.getElementById("tasks-show").style.display = "none";
+          document.getElementById("dropdown").style.display = "none";
          
 
           mostrar.innerHTML = `
