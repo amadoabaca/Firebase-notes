@@ -1,0 +1,1 @@
+Archivo .js con la configuracion del proyecto de firebase

@@ -1,3 +1,5 @@
+firebase.initializeApp(firebaseConfig);
+
 function registrar(){
     
     var email = document.getElementById("email").value;
@@ -30,7 +32,7 @@ function iniciar(){
     console.log(password2);
 
     firebase.auth().signInWithEmailAndPassword(email2, password2).catch(function(error) {
-        // Handle Errors here.
+
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log("error");
@@ -57,14 +59,26 @@ function observer(){
             var droptext = document.getElementById("dropdownText")
             var dropimg = document.getElementById("dropdownImg")
 
-            droptext.innerHTML = `
+            if(user.displayName){
+                droptext.innerHTML = `
                 <p>Hi ${user.displayName}!</p>
             
             `;
-
-            dropimg.innerHTML = `
-                <img src="${user.photoURL}" alt="">
+            }else{
+                droptext.innerHTML = `
+                <p>Hi User!</p>
+            
             `;
+            }
+                if(user.photoURL){
+                    dropimg.innerHTML = `
+                    <img src="${user.photoURL}" alt="Profile photo">
+                    `;
+                }else{
+                    dropimg.innerHTML = `
+                    <img src="assets/user.png" style="padding: 5px;" alt="Profile photo">
+                    `;
+                }
 
 
             mostrar.innerHTML = ``;
@@ -293,6 +307,7 @@ function autosize(){
     el.style.cssText = 'height:' + el.scrollHeight + 'px';
   },0);
 }
+
 
 // dropdown
 // function FunctionDropdown() {
